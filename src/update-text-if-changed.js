@@ -9,7 +9,7 @@ export function updateTextIfChanged(d, i) {
       , text = functor(format(d.value))
 
   select(this)
-      .select(changed.key(text))
       .select('.formatted-text')
+      .select(changed.key(text))
         .text(text)
 }

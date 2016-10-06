@@ -24,8 +24,7 @@ export function createGroupRows() {
   return rebind().from(layout, 'groupings')(groupRows)
 
   function groupRowsEach(d, i) {
-    const target = select(this)
-              .on('data-dirty.group-rows', () => cache = null)
+    select(this).on('data-dirty.group-rows', () => cache = null)
 
     d.dispatcher.on('row-update.group-rows', onRowUpdate)
 

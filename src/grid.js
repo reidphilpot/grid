@@ -108,5 +108,5 @@ export function createGrid() {
         , each(ensureId)
         )
 
-  return api(autodirty(redraw(throttle(throttleToAnimationFrame(skipWhenHidden(grid)), 10))))
+  return api(autodirty(redraw(throttleToAnimationFrame(/*skipWhenHidden*/(grid)))))
 }

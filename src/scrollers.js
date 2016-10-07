@@ -58,14 +58,17 @@ export function createScrollers() {
     }
 
     function updateScroll() {
-      vertical
+
+      return
+
+      /*vertical
           .select(verticalScrollChanged)
           .datum(scrollTop)
           .property('scrollTop', parseFloat)
 
       horizontal.select(horizontalScrollChanged)
           .datum(scrollLeft)
-          .property('scrollLeft', parseFloat)
+          .property('scrollLeft', parseFloat) */
     }
 
     function updateContentRules() {

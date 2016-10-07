@@ -39,6 +39,14 @@ export function createMeasureGridArea() {
     }
 
     function measureGrid() {
+
+      bounds = {
+        width: 500
+      , height: 600
+      }
+
+      return
+
       bounds = pick(
         target.node().getBoundingClientRect()
       , 'width'
@@ -47,14 +55,16 @@ export function createMeasureGridArea() {
     }
 
     function produceRowHeight() {
-      const body = target.select('.zambezi-grid-body')
+      return 19
+
+      /*const body = target.select('.zambezi-grid-body')
         , fakeSection = body.append('ul').classed('body-section transient', true)
         , fakeRow = fakeSection.append('li').classed('zambezi-grid-row', true)
         , rowStyle = window.getComputedStyle(fakeRow.node(), null)
         , rowHeight = parseFloat(rowStyle.height)
 
       fakeSection.remove()
-      return rowHeight
+      return rowHeight*/
     }
 
     function syncStirrupSize() {
@@ -69,12 +79,12 @@ export function createMeasureGridArea() {
 
     function measureBody() {
       const body = target.select('.zambezi-grid-body')
-          , offsetTop = body.node().offsetTop
+         /* , offsetTop = body.node().offsetTop */
 
       bodyBounds = {
-        height: bounds.height - offsetTop
+        height: bounds.height - 30 //offsetTop
       , width: bounds.width
-      , offsetTop: offsetTop
+      , offsetTop: 30 //offsetTop
       }
     }
 
@@ -85,6 +95,14 @@ export function createMeasureGridArea() {
         , bounds
 
       if (headers.empty()) return
+
+      headersBounds = {
+          width: 500
+        , height: 30
+        , offsetTop: 0
+      }
+
+      return
 
       headersNode = headers.node()
       offsetTop = headersNode.offsetTop

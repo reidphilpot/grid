@@ -83,11 +83,11 @@ export function createHeaders() {
     s.style('left', left)
         .style('right', right)
         .style('width', width)
-        .classed('is-scrolled-left', isScrolledLeft)
+        /*.classed('is-scrolled-left', isScrolledLeft)
         .classed('is-scrolled-right', isScrolledRight)
         .filter(scrollLeftDefined)
       .select(scrollChanged)
-        .property('scrollLeft', scrollLeft)
+        .property('scrollLeft', scrollLeft)*/
   }
 
   function drawNestedElements(s) {

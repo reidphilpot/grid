@@ -104,7 +104,10 @@ export function createStackedGrid() {
     function drawGridSlavePage(d, i) {
       const grid = gridPool[i] || createGrid()
 
-      select(this).call(
+      //setTimeout ( () =>
+      select(this)
+        .style('left', `${i * 500}px`)
+        .call(
         grid.serverSideFilterAndSort(true)
           .columns(masterGrid.columns())
           .on('sort-changed.stacked-grid',
@@ -115,6 +118,7 @@ export function createStackedGrid() {
             }
           )
       )
+      //  , i * 500)
       gridPool[i] = grid
     }
   }

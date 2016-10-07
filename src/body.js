@@ -102,19 +102,21 @@ export function createBody() {
     }
 
     function updateScroll() {
-      blocks.classed('is-vertical-short', isVerticalShort)
+      return
+
+      /*blocks.classed('is-vertical-short', isVerticalShort)
           .classed('is-horizontal-short', isHorizontalShort)
           .classed('is-scrolled-down', isScrolledTop)
           .classed('is-scrolled-up', isScrolledBottom)
           .select(verticalScrollChanged.key(verticalScroll))
-          .each(updateVerticalScroll)
+          //.each(updateVerticalScroll)
 
       blocks.classed('is-scrolled-left', isScrolledLeft)
           .classed('is-scrolled-right' , isScrolledRight)
           .select(
             horizontalScrollChanged.key(horizontalScroll)
           )
-          .each(updateHorizontalScroll)
+          //.each(updateHorizontalScroll)*/
     }
 
     function updateRowHeightStyles() {

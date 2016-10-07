@@ -15,7 +15,7 @@
 <script>
   const table = grid.createStackedGrid()
           //.columns([ {key: 'name', width: 200}, {key: 'email', width: 200} ])
-      , target = d3.select('.grid-target').style('height', '500px')
+      , target = d3.select('.grid-target').style('height', '600px')
       , count = d3.select('#data-count')
 
   d3.select('#randomize-data')
@@ -24,7 +24,7 @@
   draw()
 
   function draw() {
-    const dataCount = _.random(80, 150)
+    const dataCount = 700 // _.random(80, 150)
         , rows = _.range(1, dataCount)
             .map(_.compose(_.partial(_.pick, _, 'name', 'username', 'email'), faker.Helpers.createCard))
             .map((row, i) => Object.assign({}, row, { i }))

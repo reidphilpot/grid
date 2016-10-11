@@ -19,7 +19,7 @@ export function createNestedRowExpanders() {
 
   function nestedRowExpanders(d, i) {
 
-    const cell = d3.select(this).classed('nested-expander-cell', true)
+    const cell = select(this).classed('nested-expander-cell', true)
         , column = d.column
         , value = d.value
         , row = d.row
@@ -39,8 +39,7 @@ export function createNestedRowExpanders() {
         .classed('nested-text-field', false)
         .on('click.expand-collapse', onClick)
 
-    merge
-      .filter(isNestedTextField)
+    merge.filter(isNestedTextField)
         .text(String)
         .classed('nested-text-field', true)
         .classed('nested-indicator', false)
